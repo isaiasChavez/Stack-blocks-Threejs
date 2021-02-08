@@ -7,8 +7,11 @@ const app = new App(container);
 
 window.addEventListener('resize', () => {
 	app.onResize();
-});
-
-document.addEventListener( 'click', () => {
+} );
+container.addEventListener( 'click', () => {
 	Observer.emit(EVENTS.CLICK)
-})
+} )
+container.addEventListener( 'mousemove', (event) => {
+	Observer.emit(EVENTS.MOUSE_MOVE,event)
+}, false)
+

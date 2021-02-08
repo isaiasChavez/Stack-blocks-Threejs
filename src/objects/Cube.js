@@ -4,6 +4,11 @@ export class Cube extends Mesh {
 	constructor(size) {
 		super();
 
+
+	
+		console.log(gui,"guia");
+
+
 		this.geometry = new BoxBufferGeometry(size, size, size);
 		this.material = new MeshStandardMaterial({
 			color: new Color('orangered').convertSRGBToLinear(),
